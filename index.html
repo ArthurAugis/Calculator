@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculatrice</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="calculator">
+    <input type="text" id="result" readonly>
+    <table>
+        <tr>
+            <td colspan="2"><button onclick="clearResult()" class="btn-big">Clear</button></td>
+            <td colspan="2"><button onclick="deleteChar()" class="btn-big">Delete</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="appendChar('7')">7</button></td>
+            <td><button onclick="appendChar('8')">8</button></td>
+            <td><button onclick="appendChar('9')">9</button></td>
+            <td><button onclick="appendChar('/')">/</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="appendChar('4')">4</button></td>
+            <td><button onclick="appendChar('5')">5</button></td>
+            <td><button onclick="appendChar('6')">6</button></td>
+            <td><button onclick="appendChar('*')">*</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="appendChar('1')">1</button></td>
+            <td><button onclick="appendChar('2')">2</button></td>
+            <td><button onclick="appendChar('3')">3</button></td>
+            <td><button onclick="appendChar('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="appendChar('.')">.</button></td>
+            <td><button onclick="appendChar('0')">0</button></td>
+            <td><button onclick="calculate()">=</button></td>
+            <td><button onclick="appendChar('+')">+</button></td>
+        </tr>
+    </table>
+</div>
+
+<div id="history">
+    <h3>Historique des calculs :</h3>
+    <ul id="calc-history"></ul>
+</div>
+
+<footer>Copyright 2023 © Arthur Augis</footer>
+<script src="script.js"></script>
+</body>
+</html>
